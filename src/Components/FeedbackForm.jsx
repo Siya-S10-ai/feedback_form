@@ -5,7 +5,8 @@ const FeedbackForm = () => {
   const [formData, setFormData] = useState({ // formData useState hook
     name: '',
     email: '',
-    feedback: ''
+    feedback: '',
+    rating: ''
   });
   // Define a handleChange function to update the form data
   // as users input their information. Create this after you
@@ -83,6 +84,58 @@ const FeedbackForm = () => {
                   value={formData.feedback}
                   onChange={handleChange}
         ></textarea>
+        <div style={{
+          display: 'flex',
+          gap:'10px', 
+          flexDirection:'column'}}>
+            <span>Rate Us:</span>
+            <p>
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+                onChange={handleChange}
+                ></input>
+                1
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+                onChange={handleChange}
+                ></input>
+                2
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+                onChange={handleChange}
+                ></input>
+                3
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+                onChange={handleChange}
+                ></input>
+                4
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                onChange={handleChange}
+                ></input>
+                5
+            </p>
+          </div>
+
         <button type="submit">Submit Feedback</button>
       </form>
     </>
